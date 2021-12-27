@@ -1,10 +1,10 @@
-package com.horizam.globalfansy.Networking
+package com.horizam.skbhub.Networking
 
 import android.util.Log
 import com.google.gson.GsonBuilder
-import com.horizam.globalfansy.Utils.App
-import com.horizam.globalfansy.Utils.Constants
-import com.horizam.globalfansy.Utils.PrefManager
+import com.horizam.skbhub.Utils.App
+import com.horizam.skbhub.Utils.Constants
+import com.horizam.skbhub.Utils.PrefManager
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request

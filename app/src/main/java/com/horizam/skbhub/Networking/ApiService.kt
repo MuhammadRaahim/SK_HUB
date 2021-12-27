@@ -1,6 +1,6 @@
-package com.horizam.globalfansy.Networking
+package com.horizam.skbhub.Networking
 
-import com.horizam.globalfansy.Networking.Response.RegisterUserResponse
+import com.horizam.skbhub.Networking.Response.RegisterUserResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

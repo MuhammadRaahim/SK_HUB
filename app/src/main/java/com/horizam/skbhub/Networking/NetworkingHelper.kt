@@ -1,7 +1,7 @@
-package com.horizam.globalfansy.Networking
+package com.horizam.skbhub.Networking
 
-import com.horizam.globalfansy.Networking.Response.RegisterUserResponse
-import com.horizam.globalfansy.Networking.RetrofitClient.getApiEndpointImpl
+import com.horizam.skbhub.Networking.Response.RegisterUserResponse
+import com.horizam.skbhub.Networking.RetrofitClient.getApiEndpointImpl
 
 abstract class NetworkingHelper {
     private val apiService = getApiEndpointImpl()
@@ -11,7 +11,7 @@ abstract class NetworkingHelper {
         apiListener: ApiListener<RegisterUserResponse>
     ){
         val call = apiService.registerUser(id)
-        RetrofitClient.executeApi(call,apiListener)
+        RetrofitClient.executeApi(call, apiListener)
     }
 
 }

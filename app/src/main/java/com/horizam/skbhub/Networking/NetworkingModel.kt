@@ -1,6 +1,6 @@
-package com.horizam.globalfansy.Networking
+package com.horizam.skbhub.Networking
 
-import com.horizam.globalfansy.Networking.Response.RegisterUserResponse
+import com.horizam.skbhub.Networking.Response.RegisterUserResponse
 
 class NetworkingModel: NetworkingHelper() {
 

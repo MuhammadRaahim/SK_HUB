@@ -1,6 +1,6 @@
-package com.horizam.globalfansy.Networking
+package com.horizam.skbhub.Networking
 
-import com.horizam.globalfansy.Utils.Constants
+import com.horizam.skbhub.Utils.Constants
 import retrofit2.Response
 
 interface BaseErrorHandler {

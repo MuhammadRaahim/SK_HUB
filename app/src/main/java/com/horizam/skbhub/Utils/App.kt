@@ -1,4 +1,4 @@
-package com.horizam.globalfansy.Utils
+package com.horizam.skbhub.Utils
 
 import android.annotation.SuppressLint
 import android.app.Application
@@ -8,7 +8,7 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        context=applicationContext
+        context =applicationContext
     }
     companion object{
 

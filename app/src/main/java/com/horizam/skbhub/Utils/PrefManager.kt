@@ -1,4 +1,4 @@
-package com.horizam.globalfansy.Utils
+package com.horizam.skbhub.Utils
 
 import android.content.Context
 import android.content.SharedPreferences

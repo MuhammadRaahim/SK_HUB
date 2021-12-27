@@ -1,4 +1,4 @@
-package com.horizam.globalfansy
+package com.horizam.skbhub
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

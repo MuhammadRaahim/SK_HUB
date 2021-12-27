@@ -1,4 +1,4 @@
-package com.horizam.globalfansy
+package com.horizam.skbhub
 
 import org.junit.Test
 
