@@ -15,6 +15,14 @@
     <string name="str_full_name">Full Name</string>
     <string name="str_phone">Phone</string>
     <string name="str_address">Address</string>
+    <string name="str_home">Home</string>
+    <string name="str_category">Category</string>
+    <string name="str_sell">Sell</string>
+    <string name="str_account">Account</string>
+    <string name="str_whishlist">Whishlist</string>
+    <string name="str_todo">TODO</string>
+    <string name="str_chats">Chats</string>
+    <string name="str_Terms_and_Condition">Terms and Condition</string>
     <string name="str_confirm_password">Confirm Password</string>
     <string name="str_i_agree_with_the">I agree with the</string>
     <string name="str_terms_and_conditions">Terms and Conditions</string>
