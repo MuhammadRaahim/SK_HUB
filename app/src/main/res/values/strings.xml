@@ -22,6 +22,8 @@
     <string name="str_whishlist">Whishlist</string>
     <string name="str_todo">TODO</string>
     <string name="str_chats">Chats</string>
+    <string name="str_categories">Categories</string>
+    <string name="str_brands">Brands</string>
     <string name="str_Terms_and_Condition">Terms and Condition</string>
     <string name="str_confirm_password">Confirm Password</string>
     <string name="str_i_agree_with_the">I agree with the</string>
