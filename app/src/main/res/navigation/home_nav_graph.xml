@@ -6,27 +6,27 @@
     app:startDestination="@id/navigation_home">
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.horizam.skbhub.Fragments.HomeFragment"
+        android:name="com.jdars.shared_online_business.Fragments.HomeFragment"
         android:label="@string/str_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_category"
-        android:name="com.horizam.skbhub.Fragments.CategoryFragment"
+        android:name="com.jdars.shared_online_business.Fragments.CategoryFragment"
         android:label="@string/str_category"
         tools:layout="@layout/fragment_category" />
     <fragment
         android:id="@+id/navigation_sell"
-        android:name="com.horizam.skbhub.Fragments.SellFragment"
+        android:name="com.jdars.shared_online_business.Fragments.SellFragment"
         android:label="@string/str_sell"
         tools:layout="@layout/fragment_sell" />
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.horizam.skbhub.Fragments.AccountFragment"
+        android:name="com.jdars.shared_online_business.Fragments.AccountFragment"
         android:label="@string/str_account"
         tools:layout="@layout/fragment_account" />
     <fragment
         android:id="@+id/navigation_whishlist"
-        android:name="com.horizam.skbhub.Fragments.WhishlistFragment"
+        android:name="com.jdars.shared_online_business.Fragments.WhishlistFragment"
         android:label="@string/str_whishlist"
         tools:layout="@layout/fragment_whishlist" />
 </navigation>

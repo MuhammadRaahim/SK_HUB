@@ -8,5 +8,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="scratchEndGradient">#cccccc</color>
+    <color name="colorBorder">#c1c1c1</color>
+    <color name="transparentPurple">#4a437e</color>
 
 </resources>

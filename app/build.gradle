@@ -4,13 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.globalfansy"
-        minSdkVersion 16
-        targetSdkVersion 30
+        applicationId "com.jdars.shared_online_business"
+        minSdk 21
+        targetSdk 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -39,18 +38,22 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+    // navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+    //image slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+    //spark button
+    implementation 'com.github.varunest:sparkbutton:1.0.6'
     //Dimen
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
@@ -61,20 +64,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     // circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    // retrofit
-    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'io.reactivex:rxandroid:1.2.0'
-    implementation 'io.reactivex:rxjava:1.1.8'
-    implementation 'com.hbb20:ccp:2.4.7'
-    implementation 'com.google.code.gson:gson:2.8.8'
-    // logging
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-    // navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
-    //image slider
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
-
+    //country code
+    implementation 'com.hbb20:ccp:2.5.4'
 }

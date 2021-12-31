@@ -24,6 +24,10 @@
     <string name="str_chats">Chats</string>
     <string name="str_categories">Categories</string>
     <string name="str_brands">Brands</string>
+    <string name="str_products">PRODUCTS</string>
+    <string name="str_recently">RECENT</string>
+    <string name="str_men">Men</string>
+    <string name="str_product_name">Product Name</string>
     <string name="str_Terms_and_Condition">Terms and Condition</string>
     <string name="str_confirm_password">Confirm Password</string>
     <string name="str_i_agree_with_the">I agree with the</string>
@@ -32,4 +36,7 @@
     <string name="str_reset_your_password">Reset Your Password</string>
     <string name="str_back_to_login">Back to login</string>
     <string name="str_referral_code">Referral Code(Optional)</string>
+    <string name="str_rs_500">RS 500$</string>
+    <string name="str_location">Location</string>
+    <string name="Str_date">30-02-22</string>
 </resources>

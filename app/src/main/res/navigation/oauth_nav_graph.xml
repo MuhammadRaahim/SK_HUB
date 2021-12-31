@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.horizam.skbhub.Fragments.LoginFragment"
+        android:name="com.jdars.shared_online_business.Fragments.LoginFragment"
         android:label="@string/str_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/register_Fragment"
-        android:name="com.horizam.skbhub.Fragments.RegisterFragment"
+        android:name="com.jdars.shared_online_business.Fragments.RegisterFragment"
         android:label="@string/str_signup"
         tools:layout="@layout/fragment_register"/>
     <fragment
         android:id="@+id/reset_pass_Fragment"
-        android:name="com.horizam.skbhub.Fragments.ResetPasswordFragment"
+        android:name="com.jdars.shared_online_business.Fragments.ResetPasswordFragment"
         android:label="@string/str_reset_password"
         tools:layout="@layout/fragment_reset_password"/>
 </navigation>
