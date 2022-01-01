@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Global Fansy</string>
+    <string name="app_name">SOB</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="str_login">Login</string>
@@ -38,5 +38,20 @@
     <string name="str_referral_code">Referral Code(Optional)</string>
     <string name="str_rs_500">RS 500$</string>
     <string name="str_location">Location</string>
+    <string name="str_become_a_seller">Become a Seller</string>
+    <string name="str_seller_panel">Seller Panel</string>
+    <string name="str_my_addresses">My Addresses</string>
+    <string name="str_about_us">About Us</string>
+    <string name="str_account_setting">Account Setting</string>
+    <string name="str_notification">Notification</string>
+    <string name="str_contact_us">Contact Us</string>
+    <string name="str_ratting_the_app">Ratting the App</string>
+    <string name="str_privacy">Privacy</string>
+    <string name="str_in_stock">In Stock: </string>
+    <string name="str_maddie_brown">Maddie Brown</string>
     <string name="Str_date">30-02-22</string>
+    <string name="str_dresses">Dresses</string>
+    <string name="str_activate">Activate</string>
+    <string name="str_sign_out">Sign Out</string>
+    <string name="str_women">Women</string>
 </resources>

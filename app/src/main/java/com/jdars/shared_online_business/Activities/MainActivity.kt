@@ -2,14 +2,16 @@ package com.jdars.shared_online_business.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.jdars.shared_online_business.CallBacks.DrawerHandler
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DrawerHandler {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var bottomNavView: BottomNavigationView
@@ -30,5 +32,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpBottomNavigation() {
         bottomNavView.setupWithNavController(navController)
+    }
+
+    override fun openDrawer() {
+        binding.drawer.openDrawer(GravityCompat.START)
     }
 }
