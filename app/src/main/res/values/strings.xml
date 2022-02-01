@@ -54,4 +54,6 @@
     <string name="str_activate">Activate</string>
     <string name="str_sign_out">Sign Out</string>
     <string name="str_women">Women</string>
+    <string name="str_sort_by">Sorted By</string>
+    <string name="str_filter">Filter</string>
 </resources>
