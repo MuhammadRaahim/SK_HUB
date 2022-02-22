@@ -29,4 +29,19 @@
         android:name="com.jdars.shared_online_business.Fragments.WhishlistFragment"
         android:label="@string/str_whishlist"
         tools:layout="@layout/fragment_whishlist" />
+    <fragment
+        android:id="@+id/product_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.ProductFragment"
+        android:label="@string/str_products"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/add_product_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.AddProductFragment"
+        android:label="@string/str_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/product_details_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.ProductDetailsFragment"
+        android:label="@string/str_product_details"
+        tools:layout="@layout/fragment_product_details" />
 </navigation>

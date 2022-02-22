@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.horizam.skbhub.Adapters.CategoryListAdapter
@@ -24,7 +25,16 @@ class SellFragment : Fragment() {
     ): View? {
         binding = FragmentSellBinding.inflate(layoutInflater)
         setProductRecyclerView()
+        setClickListeners()
         return binding.root
+    }
+
+    private fun setClickListeners() {
+        binding.apply {
+            fabAddProduct.setOnClickListener {
+                findNavController().navigate(R.id.add_product_Fragment)
+            }
+        }
     }
 
     private fun setProductRecyclerView() {

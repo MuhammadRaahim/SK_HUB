@@ -177,9 +177,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_category_recyclerview"
+        android:id="@+id/rv_products"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:layout_below="@id/relativelayout1"
         android:layout_marginLeft="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_10sdp"

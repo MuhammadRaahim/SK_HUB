@@ -56,4 +56,15 @@
     <string name="str_women">Women</string>
     <string name="str_sort_by">Sorted By</string>
     <string name="str_filter">Filter</string>
+    <string name="str_add_product">ADD PRODUCT</string>
+    <string name="str_enter_price">Enter Price</string>
+    <string name="str_enter_title">Enter Title</string>
+    <string name="str_enter_purchase_price">Enter Prize</string>
+    <string name="str_enter_city">Enter City</string>
+    <string name="str_select_colour">Select colour</string>
+    <string name="str_enter_neighborhood">Enter location</string>
+    <string name="str_enter_total_items">Enter total item</string>
+    <string name="str_enter_detail_description">Enter description</string>
+    <string name="str_search_keywords">Search Keywords</string>
+    <string name="str_product_details">Product Details</string>
 </resources>

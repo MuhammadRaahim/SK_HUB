@@ -12,7 +12,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.horizam.skbhub.Adapters.BrandsAdapter
 import com.horizam.skbhub.Adapters.CategoryAdapter
-import com.horizam.skbhub.Adapters.ProductAdapter
+import com.jdars.shared_online_business.Adapters.ProductAdapter
 import com.jdars.shared_online_business.CallBacks.DrawerHandler
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.FragmentHomeBinding

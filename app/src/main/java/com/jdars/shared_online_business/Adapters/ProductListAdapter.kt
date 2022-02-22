@@ -1,7 +1,13 @@
 package com.horizam.skbhub.Adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.jdars.shared_online_business.Activities.MainActivity
+import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ProductListItemBinding
 import com.jdars.shared_online_business.databinding.SellerProductListItemBinding
 
@@ -14,7 +20,7 @@ class ProductListAdapter(): RecyclerView.Adapter<ProductListAdapter.Holder>() {
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-
+         holder.bind()
     }
 
     override fun getItemCount(): Int {
@@ -25,6 +31,18 @@ class ProductListAdapter(): RecyclerView.Adapter<ProductListAdapter.Holder>() {
         binding: SellerProductListItemBinding
     ):RecyclerView.ViewHolder(binding.root){
         var binding: SellerProductListItemBinding = binding
+
+
+
+        fun bind(){
+
+            itemView.setOnClickListener {
+                findNavController(itemView).navigate(R.id.product_details_Fragment)
+            }
+        }
+
+
+
     }
 
 }

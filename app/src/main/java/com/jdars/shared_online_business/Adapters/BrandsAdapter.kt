@@ -1,7 +1,9 @@
 package com.horizam.skbhub.Adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.BrandsItemBinding
 
 
@@ -13,7 +15,7 @@ class BrandsAdapter(): RecyclerView.Adapter<BrandsAdapter.Holder>() {
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-
+         holder.bind()
     }
 
     override fun getItemCount(): Int {
@@ -24,6 +26,12 @@ class BrandsAdapter(): RecyclerView.Adapter<BrandsAdapter.Holder>() {
         binding: BrandsItemBinding
     ):RecyclerView.ViewHolder(binding.root){
         var binding: BrandsItemBinding = binding
+
+        fun bind(){
+            itemView.setOnClickListener {
+                Navigation.findNavController(itemView).navigate(R.id.product_Fragment)
+            }
+        }
 
     }
 }
