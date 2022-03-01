@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.AddProductFragment">
     <RelativeLayout
         android:id="@+id/tab_bar"
@@ -37,28 +38,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_40sdp">
-
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/tv_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_22sdp"
                 android:text="Images:"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_18sdp"/>
             <RelativeLayout
                 android:id="@+id/rl_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_95sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginHorizontal="@dimen/_20sdp"
-                android:background="@drawable/bg_edittext">
-
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:background="@drawable/bg_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/tv_image">
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_image"
                     android:layout_width="match_parent"
@@ -66,492 +67,148 @@
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/_4sdp" />
             </RelativeLayout>
-
             <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rl_image"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
                 android:text="Title:"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="@dimen/_12sdp" />
-
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rl_image"/>
             <EditText
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_image"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_18sdp"
                 android:background="@drawable/bg_edittext"
                 android:hint="@string/str_enter_title"
                 android:inputType="text"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry" />
-            <LinearLayout
-                android:id="@+id/ll_category_subcategory"
-                android:layout_width="match_parent"
+                tools:ignore="RtlSymmetry"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+            <TextView
+                android:id="@+id/tv_categories"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/et_title">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="@dimen/_13sdp"
-                    android:text="Categories:"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_below="@id/et_title"
-                    android:layout_marginTop="@dimen/_13sdp"
-                    android:text="SubCategories:(opt)"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Categories:"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/et_title"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_sub_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="SubCategories:(opt)"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_categories"/>
             <LinearLayout
                 android:id="@+id/ll_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/et_title"
                 android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_categories"
                 android:weightSum="2">
                 <Spinner
                     android:id="@+id/sp_categories"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_35sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_weight="1"
                     android:autofillHints="Category"
                     android:background="@drawable/bg_edittext"
-                    android:padding="@dimen/_10sdp" />
+                    android:padding="@dimen/_12sdp" />
                 <Spinner
                     android:id="@+id/sp_sub_categories"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_35sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_weight="1"
                     android:autofillHints="Sub Category"
                     android:background="@drawable/bg_edittext"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
                     android:visibility="visible" />
             </LinearLayout>
             <TextView
+                android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ll_category"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Price:"
+                android:text="Prize:"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_category"/>
             <EditText
-                android:id="@+id/et_price"
+                android:id="@+id/et_priza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ll_category"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_below="@id/rl_image"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_18sdp"
                 android:background="@drawable/bg_edittext"
                 android:hint="@string/str_enter_price"
                 android:inputType="number"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="Autofill,RtlSymmetry" />
+                tools:ignore="RtlSymmetry"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price"/>
             <TextView
+                android:id="@+id/tv_brands"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/et_price"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Purchase Price:"
+                android:text="Brand:(optional)"
                 android:textColor="@color/black"
-                android:visibility="gone"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/et_purchase_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_price"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/bg_edittext"
-                android:hint="@string/str_enter_purchase_price"
-                android:inputType="number"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                android:visibility="gone"
-                tools:ignore="Autofill,RtlSymmetry" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/et_purchase_price"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Brand:(0tional)"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_priza"/>
             <Spinner
                 android:id="@+id/sp_brand"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_purchase_price"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_weight="1"
-                android:autofillHints="Category"
-                android:background="@drawable/bg_edittext"
-                android:padding="@dimen/_10sdp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sp_brand"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Condition:"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/sp_condition"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/sp_brand"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_weight="1"
-                android:autofillHints="Category"
-                android:visibility="gone"
-                android:background="@drawable/bg_edittext"
-                android:padding="@dimen/_10sdp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sp_condition"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Size:"
-                android:visibility="gone"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/sp_size"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/sp_condition"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_weight="1"
-                android:visibility="gone"
-                android:autofillHints="Category"
-                android:background="@drawable/bg_edittext"
-                android:padding="@dimen/_10sdp" />
-
-            <LinearLayout
-                android:id="@+id/ll_size"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:orientation="horizontal"
-                android:layout_below="@+id/sp_condition"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:weightSum="2">
-
-                <RelativeLayout
-                    android:id="@+id/rlp_new_select"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:background="@drawable/bg_white_with_border">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:padding="@dimen/_7sdp"
-                        android:text="New"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"/>
-
-                    <RelativeLayout
-                        android:id="@+id/rl_new_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_select_size_colour_tranparent_colour"
-                        android:visibility="visible">
-
-                        <ImageView
-                            android:layout_width="@dimen/_15sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/str_todo"
-                            android:src="@drawable/ic_tick" />
-
-                    </RelativeLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/rlp_used_select"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:background="@drawable/bg_white_with_border">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Used"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:padding="@dimen/_7sdp"
-                        />
-
-                    <RelativeLayout
-                        android:id="@+id/rl_used_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_select_size_colour_tranparent_colour"
-                        android:visibility="invisible">
-
-                        <ImageView
-                            android:layout_width="@dimen/_15sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/str_todo"
-                            android:src="@drawable/ic_tick" />
-
-                    </RelativeLayout>
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ll_size"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="City:"
-                android:visibility="gone"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/et_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ll_size"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:autofillHints="Brands"
                 android:background="@drawable/bg_edittext"
-                android:hint="@string/str_enter_city"
-                android:inputType="text"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                android:visibility="gone"
-                tools:ignore="Autofill,RtlSymmetry" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_city"
-                android:layout_marginStart="@dimen/_22sdp"
+                android:padding="@dimen/_14sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/str_select_colour"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_colour"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_below="@id/et_city"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_32sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rv_colour"
-                android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Select Size:(Optional)"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_size"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rv_colour"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_32sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rv_size"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Neighbourhood:"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-             <TextView
-                android:id="@+id/tv_neighborhood"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rv_size"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/bg_edittext"
-
-                android:hint="@string/str_enter_neighborhood"
-                android:inputType="text"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                tools:ignore="Autofill,RtlSymmetry" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_neighborhood"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Total items:"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/et_total_items"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_neighborhood"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edittext"
-                android:hint="@string/str_enter_total_items"
-                android:inputType="number"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                tools:ignore="Autofill,ObsoleteLayoutParam,RtlSymmetry" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/et_total_items"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Search Keywords:(Optional)"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-            <EditText
-                android:id="@+id/et_meta_tags"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_total_items"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/bg_edittext"
-                android:hint="@string/str_search_keywords"
-                android:padding="@dimen/_10sdp"
-                android:gravity="start"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                android:visibility="visible"
-                tools:ignore="Autofill,ObsoleteLayoutParam,RtlSymmetry,TextFields" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/et_meta_tags"
-                android:layout_marginHorizontal="@dimen/_22sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text="Description:"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/et_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_meta_tags"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edittext"
-                android:gravity="top"
-                android:hint="@string/str_enter_detail_description"
-                android:lines="5"
-                android:maxLines="4"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                tools:ignore="Autofill,ObsoleteLayoutParam,RtlSymmetry,TextFields" />
-
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brands"/>
             <Button
                 android:id="@+id/bt_add_product"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_below="@id/et_description"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/bg_select_size_colour_tranparent_colour"
+                android:background="@color/purple_800"
                 android:text="@string/str_add_product"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_11sdp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_below="@id/bt_add_product"
-                android:layout_marginTop="@dimen/_20sdp" />
-        </RelativeLayout>
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintTop_toBottomOf="@+id/sp_brand"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </RelativeLayout>
