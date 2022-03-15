@@ -59,6 +59,7 @@
                 android:id="@+id/outer_relativelayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/cv_profile_image"
                     android:layout_width="@dimen/_70sdp"

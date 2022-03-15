@@ -67,4 +67,19 @@
     <string name="str_enter_detail_description">Enter description</string>
     <string name="str_search_keywords">Search Keywords</string>
     <string name="str_product_details">Product Details</string>
+    <string name="str_black_leather_belt">BLack balt</string>
+    <string name="str__76_31">£76.31</string>
+    <string name="str_lahore_thokar_niaz_baigh">lahore thokar niaz baig</string>
+    <string name="str_availability">Availability:-  </string>
+    <string name="str_out_of_stock">Out of stock</string>
+    <string name="str_product_detail">Product Details</string>
+    <string name="str_type">Type</string>
+    <string name="str_condition">Condition</string>
+    <string name="str_sizes">Sizes</string>
+    <string name="str_color">Colours</string>
+    <string name="str_description">Description</string>
+    <string name="str_seller_details">Seller Details</string>
+    <string name="str_hafiz_sajjad_motor">Khadijah Jutt</string>
+    <string name="str_member_since_jan_2017">member since 1987</string>
+    <string name="str_chat_with_seller">Chat with seller</string>
 </resources>
