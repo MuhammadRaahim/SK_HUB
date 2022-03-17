@@ -16,7 +16,7 @@ class ProductsPageAdapter(): RecyclerView.Adapter<ProductsPageAdapter.Holder>() 
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
           holder.itemView.setOnClickListener {
-              Navigation.findNavController(holder.itemView).navigate(R.id.product_Fragment)
+              Navigation.findNavController(holder.itemView).navigate(R.id.product_details_Fragment)
           }
     }
 

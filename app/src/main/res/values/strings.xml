@@ -82,4 +82,9 @@
     <string name="str_hafiz_sajjad_motor">Khadijah Jutt</string>
     <string name="str_member_since_jan_2017">member since 1987</string>
     <string name="str_chat_with_seller">Chat with seller</string>
+    <string name="str_my_account">Account</string>
+    <string name="str_username">usrname</string>
+    <string name="str_phone_number">phone no</string>
+    <string name="str_gender">gender</string>
+    <string name="str_update_profile">"SAVE "</string>
 </resources>

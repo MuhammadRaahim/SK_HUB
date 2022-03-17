@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlobalFansy">
         <activity
+            android:name=".Activities.AccountSettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -23,7 +26,7 @@
         <activity
             android:name=".Activities.AuthenticationActivity"
             android:exported="false" />
-        <activity android:name=".Activities.MainActivity"/>
+        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>
