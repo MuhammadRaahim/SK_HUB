@@ -31,13 +31,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_field_full_name"
+            android:id="@+id/text_field_username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:hint="@string/str_full_name"
+            android:hint="@string/str_username"
             app:counterEnabled="true"
             app:counterMaxLength="20"
             app:endIconMode="clear_text"
@@ -45,7 +45,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_sign_up">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_full_name"
+                android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -63,7 +63,7 @@
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_field_full_name">
+            app:layout_constraintTop_toBottomOf="@+id/text_field_username">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
@@ -80,11 +80,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_field_email">
-<!--            <com.hbb20.CountryCodePicker-->
-<!--                android:id="@+id/ccp"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:ccp_autoDetectCountry="true" />-->
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true" />
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_carrierNumber"
                 android:layout_width="match_parent"
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_1sdp"
-            android:hint="@string/str_referral_code"
+            android:hint="@string/str_gender"
             app:counterEnabled="true"
             app:counterMaxLength="10"
             app:endIconMode="clear_text"
@@ -128,10 +128,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_field_address">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_referral"
+                android:id="@+id/et_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="text"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -241,7 +241,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_already_have_account" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/grey"
+            android:alpha="0.7"
+            android:elevation="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_7sdp"
+                android:indeterminate="true"
+                android:visibility="visible"
+                app:indicatorColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

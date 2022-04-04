@@ -7,5 +7,6 @@ class Constants {
         const val BASE_URL: String = ""
         const val NAME: String = "raahim"
         const val SPLASH_DISPLAY_LENGTH = 3000
+        const val USERS_DATABASE_ROOT = "Users"
     }
 }

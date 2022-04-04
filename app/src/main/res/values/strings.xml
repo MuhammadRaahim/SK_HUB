@@ -87,4 +87,11 @@
     <string name="str_phone_number">phone no</string>
     <string name="str_gender">gender</string>
     <string name="str_update_profile">"SAVE "</string>
+    <string name="str_enter_valid_name">Enter a valid name</string>
+    <string name="str_enter_valid_email_address">Enter a valid email address</string>
+    <string name="str_enter_valid_phone">Enter a valid phone number</string>
+    <string name="str_enter_valid_username">Please enter a valid username</string>
+    <string name="str_enter_valid_password_policy">Password should be minimum 6 characters long</string>
+    <string name="str_enter_valid_address">Enter a valid address</string>
+    <string name="str_signup_successfully">Signup Successfully</string>
 </resources>
