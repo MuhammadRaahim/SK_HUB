@@ -94,4 +94,7 @@
     <string name="str_enter_valid_password_policy">Password should be minimum 6 characters long</string>
     <string name="str_enter_valid_address">Enter a valid address</string>
     <string name="str_signup_successfully">Signup Successfully</string>
+    <string name="str_enter_product_description">Enter product description</string>
+    <string name="str_add_brand">ADD BRAND</string>
+    <string name="str_add_category">ADD CATEGORY</string>
 </resources>

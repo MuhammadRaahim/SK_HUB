@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.AddProductFragment">
+    tools:context=".Fragments.AddCategoryFragment">
     <RelativeLayout
         android:id="@+id/tab_bar"
         android:layout_width="match_parent"
@@ -21,69 +21,68 @@
             android:focusable="true"
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/str_todo" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/_20sdp"
-            android:text="@string/str_add_product"
+            android:text="@string/str_add_category"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"
-            android:textAllCaps="true"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_40sdp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tv_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
                 android:text="Images:"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/_18sdp"/>
-            <RelativeLayout
-                android:id="@+id/iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_95sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@drawable/bg_edittext"
-                app:layout_constraintTop_toBottomOf="@+id/tv_image">
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_85sdp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/_4sdp" />
-            </RelativeLayout>
+                app:layout_constraintTop_toBottomOf="@+id/tv_image"></ImageView>
+
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="Title:"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv"/>
+                app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
             <EditText
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iv"
+                android:layout_below="@id/iv_logo"
                 android:layout_marginLeft="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_18sdp"
@@ -93,127 +92,83 @@
                 android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:ignore="RtlSymmetry" />
+
             <TextView
                 android:id="@+id/tv_owner_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="Categories:"
                 android:layout_marginStart="@dimen/_18sdp"
-                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Owner Name:"
                 android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/et_title"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
             <TextView
                 android:id="@+id/tv_owner_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="SubCategories:(opt)"
                 android:layout_marginStart="@dimen/_50sdp"
-                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Owner Email"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_title"
-                app:layout_constraintStart_toEndOf="@+id/tv_owner_name"/>
+                app:layout_constraintStart_toEndOf="@+id/tv_owner_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
             <LinearLayout
                 android:id="@+id/ll_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginHorizontal="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_owner_name"
-                android:weightSum="2">
-                <Spinner
-                    android:id="@+id/sp_categories"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_owner_name">
+
+                <EditText
+                    android:id="@+id/et_owner_name"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:autofillHints="Category"
                     android:background="@drawable/bg_edittext"
-                    android:padding="@dimen/_12sdp" />
-                <Spinner
-                    android:id="@+id/sp_sub_categories"
+                    android:hint="name"
+                    android:padding="@dimen/_5sdp" />
+
+                <EditText
+                    android:id="@+id/et_owner_email"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
-                    android:autofillHints="Sub Category"
                     android:background="@drawable/bg_edittext"
-                    android:padding="@dimen/_12sdp"
+                    android:hint="email"
+                    android:padding="@dimen/_5sdp"
                     android:visibility="visible" />
             </LinearLayout>
-            <TextView
-                android:id="@+id/tv_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Prize:"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_category"/>
-            <EditText
-                android:id="@+id/et_priza"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv"
-                android:layout_marginLeft="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_18sdp"
-                android:background="@drawable/bg_edittext"
-                android:hint="@string/str_enter_price"
-                android:inputType="number"
-                android:padding="@dimen/_8sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry"
-                app:layout_constraintTop_toBottomOf="@+id/tv_price"/>
-            <TextView
-                android:id="@+id/tv_brands"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Brand:(optional)"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_priza"/>
-            <Spinner
-                android:id="@+id/sp_brand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints="Brands"
-                android:background="@drawable/bg_edittext"
-                android:padding="@dimen/_14sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginHorizontal="@dimen/_18sdp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_brands"/>
+
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="Description:"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sp_brand"/>
+                app:layout_constraintTop_toBottomOf="@+id/ll_category" />
+
             <EditText
                 android:id="@+id/et_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iv"
+                android:layout_below="@id/iv_logo"
                 android:layout_marginLeft="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_18sdp"
@@ -223,20 +178,21 @@
                 android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry"
-                app:layout_constraintTop_toBottomOf="@+id/tv_description"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                tools:ignore="RtlSymmetry" />
+
             <Button
-                android:id="@+id/bt_add_product"
+                android:id="@+id/bt_add_category"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@color/purple_800"
-                android:text="@string/str_add_product"
+                android:text="@string/str_add_category"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_11sdp"
-                app:layout_constraintTop_toBottomOf="@+id/et_description"/>
+                app:layout_constraintTop_toBottomOf="@+id/et_description" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </RelativeLayout>

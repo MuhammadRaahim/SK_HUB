@@ -44,8 +44,13 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.reset_pass_Fragment)
         }
         binding.btnLogin.setOnClickListener {
-            binding.progressLayout.visibility = View.VISIBLE
-            loginUser()
+            if(!binding.etEmail.text.isNullOrEmpty() && !binding.etPassword.text.isNullOrEmpty()){
+                binding.progressLayout.visibility = View.VISIBLE
+                loginUser()
+            }else{
+                showMessage(binding.root,"Invalid credentials")
+            }
+
         }
     }
 

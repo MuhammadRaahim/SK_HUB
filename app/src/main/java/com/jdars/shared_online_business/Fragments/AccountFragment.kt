@@ -33,8 +33,8 @@ class AccountFragment : Fragment() {
             llAccountSetting.setOnClickListener {
                 startActivity(Intent(requireContext(),AccountSettingActivity::class.java))
             }
-            llBecomeSeller.setOnClickListener {
-                findNavController().navigate(R.id.add_product_Fragment)
+            llSellerPanel.setOnClickListener {
+                findNavController().navigate(R.id.seller_panel_Fragment)
             }
             llSignOut.setOnClickListener {
                 startActivity(Intent(requireContext(),AuthenticationActivity::class.java))

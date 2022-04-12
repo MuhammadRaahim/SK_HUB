@@ -23,6 +23,7 @@
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/drawable-v24/ic_privacy.xml" value="0.19375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/drawable-v24/ic_ratting_app.xml" value="0.19375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/drawable-v24/ic_settings.xml" value="0.19375" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/drawable/bg_bottom_text_color.xml" value="0.19375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/activity_account_setting.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/activity_auth.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/activity_main.xml" value="0.1734375" />
@@ -32,6 +33,8 @@
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/category_home_item.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/category_list_item.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_account.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_add_brand.xml" value="0.15625" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_add_category.xml" value="0.15625" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_add_product.xml" value="0.22" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_category.xml" value="0.12129629629629629" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_home.xml" value="0.12129629629629629" />
@@ -41,9 +44,11 @@
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_register.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_reset_password.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_sell.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_seller_panel.xml" value="0.16" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/fragment_whishlist.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/product_list_item.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/layout/seller_product_list_item.xml" value="0.43673469387755104" />
+        <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/menu/menu_bottom_nav.xml" value="0.1734375" />
         <entry key="..\:/Users/Dell/Documents/GitHub/SK_HUB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19375" />
       </map>
     </option>

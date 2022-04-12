@@ -44,4 +44,19 @@
         android:name="com.jdars.shared_online_business.Fragments.ProductDetailsFragment"
         android:label="@string/str_product_details"
         tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/seller_panel_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.SellerPanelFragment"
+        android:label="@string/str_seller_panel"
+        tools:layout="@layout/fragment_seller_panel" />
+    <fragment
+        android:id="@+id/add_brand_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.AddBrandFragment"
+        android:label="@string/str_add_brand"
+        tools:layout="@layout/fragment_add_brand" />
+    <fragment
+        android:id="@+id/add_category_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.AddCategoryFragment"
+        android:label="@string/str_add_category"
+        tools:layout="@layout/fragment_add_category" />
 </navigation>
