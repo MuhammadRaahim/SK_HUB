@@ -55,7 +55,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
                 android:id="@+id/iv_logo"
                 android:layout_width="match_parent"
@@ -63,8 +62,19 @@
                 android:layout_marginHorizontal="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:background="@drawable/bg_edittext"
-                app:layout_constraintTop_toBottomOf="@+id/tv_image"></ImageView>
-
+                app:layout_constraintTop_toBottomOf="@+id/tv_image"/>
+            <ImageView
+                android:id="@+id/iv_edit_image"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/bg_circle_white"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+                app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+                app:tint="@color/white" />
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
@@ -94,7 +104,34 @@
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title"
                 tools:ignore="RtlSymmetry" />
-
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Type:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+            <EditText
+                android:id="@+id/et_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_logo"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_18sdp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Enter type"
+                android:inputType="text"
+                android:padding="@dimen/_8sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type"
+                tools:ignore="RtlSymmetry" />
             <TextView
                 android:id="@+id/tv_owner_name"
                 android:layout_width="wrap_content"
@@ -102,11 +139,11 @@
                 android:layout_marginStart="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Owner Name:"
+                android:visibility="gone"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_title" />
-
             <TextView
                 android:id="@+id/tv_owner_email"
                 android:layout_width="wrap_content"
@@ -114,22 +151,22 @@
                 android:layout_marginStart="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Owner Email"
+                android:visibility="gone"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_owner_name"
                 app:layout_constraintTop_toBottomOf="@+id/et_title" />
-
             <LinearLayout
                 android:id="@+id/ll_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 app:layout_constraintTop_toBottomOf="@+id/tv_owner_name">
-
                 <EditText
                     android:id="@+id/et_owner_name"
                     android:layout_width="fill_parent"
@@ -150,7 +187,6 @@
                     android:padding="@dimen/_5sdp"
                     android:visibility="visible" />
             </LinearLayout>
-
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
@@ -162,8 +198,7 @@
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_category" />
-
+                app:layout_constraintTop_toBottomOf="@+id/et_type" />
             <EditText
                 android:id="@+id/et_description"
                 android:layout_width="match_parent"
@@ -180,7 +215,6 @@
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_description"
                 tools:ignore="RtlSymmetry" />
-
             <Button
                 android:id="@+id/bt_add_category"
                 android:layout_width="match_parent"

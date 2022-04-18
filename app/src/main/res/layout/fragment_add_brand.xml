@@ -34,45 +34,62 @@
             android:textAllCaps="true"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_40sdp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tv_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
                 android:text="Images:"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/_18sdp"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/iv_logo"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_95sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@drawable/bg_edittext"
-                app:layout_constraintTop_toBottomOf="@+id/tv_image">
-            </ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/tv_image" />
+
+            <ImageView
+                android:id="@+id/iv_edit_image"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/bg_circle_white"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+                app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+                app:tint="@color/white" />
+
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="Title:"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_logo"/>
+                app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
             <EditText
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
@@ -87,71 +104,77 @@
                 android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:ignore="RtlSymmetry" />
+
             <TextView
                 android:id="@+id/tv_owner_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Owner Name:"
-                android:layout_marginStart="@dimen/_18sdp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/et_title"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
             <TextView
                 android:id="@+id/tv_owner_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Owner Email"
-                android:layout_marginStart="@dimen/_50sdp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_title"
-                app:layout_constraintStart_toEndOf="@+id/tv_owner_name"/>
+                app:layout_constraintStart_toEndOf="@+id/tv_owner_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_title" />
+
             <LinearLayout
                 android:id="@+id/ll_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginHorizontal="@dimen/_18sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_owner_name"
-                android:weightSum="2">
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_owner_name">
+
                 <EditText
                     android:id="@+id/et_owner_name"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="name"
                     android:background="@drawable/bg_edittext"
+                    android:hint="name"
                     android:padding="@dimen/_5sdp" />
+
                 <EditText
                     android:id="@+id/et_owner_email"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
-                    android:hint="email"
                     android:background="@drawable/bg_edittext"
+                    android:hint="email"
                     android:padding="@dimen/_5sdp"
                     android:visibility="visible" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="Description:"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_18sdp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_category"/>
+                app:layout_constraintTop_toBottomOf="@+id/ll_category" />
             <EditText
                 android:id="@+id/et_description"
                 android:layout_width="match_parent"
@@ -162,12 +185,13 @@
                 android:layout_marginRight="@dimen/_18sdp"
                 android:background="@drawable/bg_edittext"
                 android:hint="@string/str_enter_product_description"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
-                tools:ignore="RtlSymmetry"
-                app:layout_constraintTop_toBottomOf="@+id/tv_description"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                tools:ignore="RtlSymmetry" />
+
             <Button
                 android:id="@+id/bt_add_brand"
                 android:layout_width="match_parent"
@@ -179,7 +203,7 @@
                 android:text="@string/str_add_brand"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_11sdp"
-                app:layout_constraintTop_toBottomOf="@+id/et_description"/>
+                app:layout_constraintTop_toBottomOf="@+id/et_description" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

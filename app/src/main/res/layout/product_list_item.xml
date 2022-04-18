@@ -106,17 +106,18 @@
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
             android:gravity="center_horizontal" />
+
         <TextView
             android:id="@+id/tv_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
             android:maxLines="1"
             android:text="@string/str_rs_500"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp"
-            android:gravity="center_horizontal" />
+            android:textSize="@dimen/_10sdp" />
         <TextView
             android:id="@+id/tv_address"
             android:layout_width="@dimen/_65sdp"
@@ -130,19 +131,20 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_10sdp"
             android:layout_marginLeft="@dimen/_5sdp" />
+
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:text="@string/Str_date"
             android:textColor="@color/black"
             android:textSize="@dimen/_10sdp"
-            tools:ignore="RelativeOverlap"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/_5sdp" />
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 </RelativeLayout>

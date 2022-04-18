@@ -94,7 +94,11 @@
     <string name="str_enter_valid_password_policy">Password should be minimum 6 characters long</string>
     <string name="str_enter_valid_address">Enter a valid address</string>
     <string name="str_signup_successfully">Signup Successfully</string>
+    <string name="permission_required">Permission required for app to work properly</string>
     <string name="str_enter_product_description">Enter product description</string>
     <string name="str_add_brand">ADD BRAND</string>
     <string name="str_add_category">ADD CATEGORY</string>
+    <string name="str_invalid_field">Invalid field</string>
+    <string name="str_please_wait">Please Wait</string>
+    <string name="str_file_uploading">file is uploading</string>
 </resources>
