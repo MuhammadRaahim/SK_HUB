@@ -42,7 +42,10 @@ class MainActivity : AppCompatActivity(), DrawerHandler, GenericHandler {
     }
 
     override fun showProgressBar(show: Boolean) {
-        binding.progressLayout.isVisible = show
+        if (::binding.isInitialized) {
+            binding.progressLayout.isVisible = show
+        }
+
     }
 
     override fun showMessage(message: String) {

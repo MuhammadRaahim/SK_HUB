@@ -30,12 +30,10 @@ import com.google.firebase.storage.UploadTask
 import com.horizam.skbhub.Utils.Constants.Companion.BRANDS_DATABASE_ROOT
 import com.jdars.shared_online_business.CallBacks.GenericHandler
 import com.jdars.shared_online_business.R
-import com.jdars.shared_online_business.Utils.BaseUtils
 import com.jdars.shared_online_business.Utils.ImageFilePath
 import com.jdars.shared_online_business.databinding.DialogFileUploadingBinding
 import com.jdars.shared_online_business.databinding.FragmentAddBrandBinding
 import com.jdars.shared_online_business.models.Brand
-import com.jdars.shared_online_business.models.User
 import java.io.File
 import java.util.*
 
@@ -261,13 +259,13 @@ class AddBrandFragment : Fragment() {
         view: View, msg: String, length: Int, actionMessage: CharSequence?,
         action: (View) -> Unit
     ) {
-        val snackbar = Snackbar.make(view, msg, length)
+        val snackBar = Snackbar.make(view, msg, length)
         if (actionMessage != null) {
-            snackbar.setAction(actionMessage) {
+            snackBar.setAction(actionMessage) {
                 action(requireView().findViewById(android.R.id.content))
             }.show()
         } else {
-            snackbar.show()
+            snackBar.show()
         }
     }
 

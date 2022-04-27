@@ -160,7 +160,7 @@ class AddCategoryFragment : Fragment() {
 
     private fun addCategory(image: String) {
         binding.apply {
-            genericHandler.showProgressBar(false)
+            genericHandler.showProgressBar(true)
             val refId  = categoryReference.document()
             val title = etTitle.text.toString().trim()
             val type = etType.text.toString().trim()

@@ -1,13 +1,18 @@
 package com.horizam.skbhub.Adapters
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.CategoryHomeItemBinding
+import com.jdars.shared_online_business.models.Brand
+import com.jdars.shared_online_business.models.Category
 
 
-class CategoryAdapter(): RecyclerView.Adapter<CategoryAdapter.Holder>() {
+class CategoryAdapter(
+    private var categoryList: ArrayList<Category>
+): RecyclerView.Adapter<CategoryAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding: CategoryHomeItemBinding = CategoryHomeItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -19,7 +24,13 @@ class CategoryAdapter(): RecyclerView.Adapter<CategoryAdapter.Holder>() {
     }
 
     override fun getItemCount(): Int {
-        return 7
+        return categoryList.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateList(list: ArrayList<Category>){
+        categoryList = list
+        notifyDataSetChanged()
     }
 
     inner class Holder(

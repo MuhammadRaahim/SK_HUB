@@ -20,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlobalFansy">
         <activity
+            android:name=".Activities.CategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.BrandsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.AccountSettingActivity"
             android:exported="false" />
         <activity

@@ -61,6 +61,7 @@
         android:layout_gravity="start"
         android:background="@color/white"
         android:visibility="invisible"
+        app:labelVisibilityMode="labeled"
         app:headerLayout="@layout/nav_header_layout"
         app:menu="@menu/menu_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>

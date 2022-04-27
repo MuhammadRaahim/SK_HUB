@@ -1,4 +1,5 @@
 package com.jdars.shared_online_business.Adapters
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
@@ -6,9 +7,13 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ProductListItemBinding
+import com.jdars.shared_online_business.models.Category
+import com.jdars.shared_online_business.models.Product
 
 
-class ProductAdapter(): RecyclerView.Adapter<ProductAdapter.Holder>() {
+class ProductAdapter(
+    private var productList: ArrayList<Product>
+): RecyclerView.Adapter<ProductAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding: ProductListItemBinding = ProductListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -21,7 +26,13 @@ class ProductAdapter(): RecyclerView.Adapter<ProductAdapter.Holder>() {
     }
 
     override fun getItemCount(): Int {
-        return 7
+        return productList.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateList(list: ArrayList<Product>){
+        productList = list
+        notifyDataSetChanged()
     }
 
     inner class Holder(
