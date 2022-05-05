@@ -1,5 +1,6 @@
 package com.horizam.skbhub.Adapters
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -10,7 +11,8 @@ import com.jdars.shared_online_business.models.Brand
 
 
 class BrandsAdapter(
-    private var brandList: ArrayList<Brand>
+    private var brandList: ArrayList<Brand>,
+    private var context: Context
 ): RecyclerView.Adapter<BrandsAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {

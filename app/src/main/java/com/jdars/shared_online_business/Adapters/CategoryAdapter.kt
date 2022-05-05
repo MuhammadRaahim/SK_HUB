@@ -1,17 +1,19 @@
 package com.horizam.skbhub.Adapters
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.CategoryHomeItemBinding
-import com.jdars.shared_online_business.models.Brand
 import com.jdars.shared_online_business.models.Category
 
 
 class CategoryAdapter(
-    private var categoryList: ArrayList<Category>
+    private var categoryList: ArrayList<Category>,
+    private val context: Context
 ): RecyclerView.Adapter<CategoryAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -20,7 +22,7 @@ class CategoryAdapter(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-       holder.bind()
+       holder.bind(position)
     }
 
     override fun getItemCount(): Int {
@@ -38,7 +40,11 @@ class CategoryAdapter(
     ):RecyclerView.ViewHolder(binding.root){
         var binding: CategoryHomeItemBinding = binding
 
-        fun bind(){
+        fun bind(position: Int) {
+            val category = categoryList[position]
+            Glide.with(context).load(category.brandImage)
+                .into(binding.ivImage)
+            binding.tvName.text = category.categoryTitle
             itemView.setOnClickListener {
                 Navigation.findNavController(itemView).navigate(R.id.product_Fragment)
             }

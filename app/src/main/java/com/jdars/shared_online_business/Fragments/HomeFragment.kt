@@ -194,19 +194,19 @@ class HomeFragment : Fragment() {
 
     private fun setCategoryRecyclerView() {
         binding.rvAllCategory.layoutManager =  LinearLayoutManager(requireActivity(),  RecyclerView.HORIZONTAL, false)
-        categoryAdapter = CategoryAdapter(categoryList)
+        categoryAdapter = CategoryAdapter(categoryList,requireContext())
         binding.rvAllCategory.adapter = categoryAdapter
     }
 
     private fun setBrandRecyclerView() {
         binding.rvAllBrands.layoutManager =  LinearLayoutManager(requireActivity(),  RecyclerView.HORIZONTAL, false)
-        brandAdapter = BrandsAdapter(brandList)
+        brandAdapter = BrandsAdapter(brandList,requireContext())
         binding.rvAllBrands.adapter = brandAdapter
     }
 
     private fun setProductRecyclerView() {
         binding.rvAllProduct.layoutManager =  LinearLayoutManager(requireActivity(),  RecyclerView.HORIZONTAL, false)
-        productAdapter = ProductAdapter(productList)
+        productAdapter = ProductAdapter(productList,requireContext())
         binding.rvAllProduct.adapter = productAdapter
     }
 

@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
     private fun checkLoginInfo(){
         val user = Firebase.auth.currentUser
         val intent = if (user != null){
-            Intent(this@SplashActivity, MainActivity::class.java)
+            Intent(this@SplashActivity, HomeActivity::class.java)
         }else{
             Intent(this@SplashActivity, AuthenticationActivity::class.java)
         }

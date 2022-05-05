@@ -1,5 +1,6 @@
 package com.jdars.shared_online_business.Adapters
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
@@ -12,7 +13,9 @@ import com.jdars.shared_online_business.models.Product
 
 
 class ProductAdapter(
-    private var productList: ArrayList<Product>
+    private var productList: ArrayList<Product>,
+    private var context: Context
+
 ): RecyclerView.Adapter<ProductAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {

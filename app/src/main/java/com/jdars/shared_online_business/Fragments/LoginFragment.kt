@@ -6,12 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.jdars.shared_online_business.Activities.MainActivity
+import com.jdars.shared_online_business.Activities.HomeActivity
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.Utils.BaseUtils.Companion.showMessage
 import com.jdars.shared_online_business.databinding.FragmentLoginBinding
@@ -59,7 +58,7 @@ class LoginFragment : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     binding.progressLayout.visibility = View.GONE
-                    var intent = Intent(requireActivity(), MainActivity::class.java)
+                    var intent = Intent(requireActivity(), HomeActivity::class.java)
                     intent.flags =
                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)

@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlobalFansy">
         <activity
+            android:name=".Activities.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.CategoriesActivity"
             android:exported="false" />
         <activity
@@ -37,10 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activities.AuthenticationActivity"
-            android:exported="false" />
-        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>
