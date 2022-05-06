@@ -12,5 +12,7 @@ data class Product(
     var pColour: String = "",
     var pDescription: String = "",
     var createdAt: String = "",
+    var pLocation: String = "",
+    var pCondition: Boolean = false,
     var pImage: String? = null
     )

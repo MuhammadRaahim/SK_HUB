@@ -43,6 +43,7 @@ class CategoryAdapter(
         fun bind(position: Int) {
             val category = categoryList[position]
             Glide.with(context).load(category.brandImage)
+                .placeholder(R.drawable.img_category_logo)
                 .into(binding.ivImage)
             binding.tvName.text = category.categoryTitle
             itemView.setOnClickListener {

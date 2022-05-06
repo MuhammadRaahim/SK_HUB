@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.BrandsItemBinding
 import com.jdars.shared_online_business.models.Brand
@@ -21,7 +22,7 @@ class BrandsAdapter(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-         holder.bind()
+         holder.bind(position)
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +40,13 @@ class BrandsAdapter(
     ):RecyclerView.ViewHolder(binding.root){
         var binding: BrandsItemBinding = binding
 
-        fun bind(){
+        fun bind(position: Int) {
+            val brand = brandList[position]
+            Glide.with(context).load(brand.brandImage)
+                .placeholder(R.drawable.img_brand_logo)
+                .into(binding.ivImage)
+            binding.tvName.text = brand.brandTitle
+
             itemView.setOnClickListener {
                 Navigation.findNavController(itemView).navigate(R.id.product_Fragment)
             }

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/_7sdp"
         app:cardBackgroundColor="@color/white"
-        android:elevation="@dimen/_5sdp"
+        android:elevation="@dimen/_20sdp"
         android:background="@color/white"
         app:cardMaxElevation="@dimen/_7sdp">
         <RelativeLayout
@@ -60,18 +60,19 @@
             app:sparkbutton_primaryColor="@color/purple_800"
             app:sparkbutton_secondaryColor="@color/purple_800" />
     </RelativeLayout>
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_140sdp"
-        android:contentDescription="@string/str_todo"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_product_placeholder" />
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:contentDescription="@string/str_todo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_product_placeholder" />
     <RelativeLayout
         android:id="@+id/rl_sold_out"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_140sdp"
         android:alpha="0.7"
+        android:visibility="gone"
         android:background="@color/transparentPurple">
         <TextView
             android:layout_width="wrap_content"

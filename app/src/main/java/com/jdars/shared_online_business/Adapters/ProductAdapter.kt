@@ -4,11 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ProductListItemBinding
-import com.jdars.shared_online_business.models.Category
 import com.jdars.shared_online_business.models.Product
 
 
@@ -24,8 +23,7 @@ class ProductAdapter(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-          holder.bind()
-
+          holder.bind(position)
     }
 
     override fun getItemCount(): Int {
@@ -43,7 +41,16 @@ class ProductAdapter(
     ):RecyclerView.ViewHolder(binding.root){
         var binding: ProductListItemBinding = binding
 
-        fun bind(){
+        fun bind(position: Int) {
+            val product = productList[position]
+
+            Glide.with(context).load(product.pImage)
+                .placeholder(R.drawable.img_product_placeholder)
+                .into(binding.ivImage)
+            binding.tvName.text = product.pTitle
+            binding.tvPrice.text = product.pPrice
+            binding.tvAddress.text = product.pBrand
+            binding.tvDate.text = product.createdAt
             itemView.setOnClickListener {
                 findNavController(itemView).navigate(R.id.product_details_Fragment)
             }

@@ -201,7 +201,8 @@ class AddProductFragment : Fragment() {
     private fun addProduct(image: String) {
         binding.apply {
             genericHandler.showProgressBar(false)
-            val id: String = productReference.id
+            val ref = productReference.document()
+            val id: String = ref.id
             val ownerId: String = currentFirebaseUser.uid
             val pTitle: String = etTitle.text.toString().trim()
             val pCategory: String = spCategories.text.toString().trim()
@@ -210,6 +211,8 @@ class AddProductFragment : Fragment() {
             val pBrand: String = etBrand.text.toString().trim()
             val pSize: String = etPriza.text.toString().trim()
             val pColour: String = etColor.text.toString().trim()
+            val pLocation: String = etLocation.text.toString().trim()
+            val pCondition: Boolean = cbProductCondition.isChecked
             val pDescription: String = etDescription.text.toString().trim()
             val createdAt: String =
                 SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
@@ -218,7 +221,8 @@ class AddProductFragment : Fragment() {
 
             val product = Product(id = id, ownerId = ownerId, pTitle = pTitle, pCategory = pCategory,
             pSubCategory = pSubCategory, pPrice = pPrice, pBrand = pBrand, pSize = pSize,
-            pColour = pColour, pDescription = pDescription, createdAt = createdAt, pImage = pImage)
+            pColour = pColour, pDescription = pDescription,pLocation = pLocation,pCondition = pCondition,
+                createdAt = createdAt, pImage = pImage)
 
             uploadProduct(product)
 
