@@ -20,6 +20,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_toEndOf="@id/iv_image"
             android:src="@drawable/img_view" />
+
         <TextView
             android:id="@+id/tv_views"
             android:layout_width="wrap_content"
@@ -27,7 +28,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/_38sdp"
             android:layout_toEndOf="@id/iv_image"
-            android:text=": 77"
+            android:text=""
             android:textColor="@color/black" />
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -35,6 +36,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:background="@color/purple_800">
+
             <TextView
                 android:id="@+id/tv_status"
                 android:layout_width="wrap_content"
@@ -45,6 +47,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </RelativeLayout>
+
         <ImageView
             android:id="@+id/iv_image"
             android:layout_width="@dimen/_65sdp"
@@ -54,6 +57,7 @@
             android:contentDescription="@string/str_todo"
             android:scaleType="centerCrop"
             android:src="@drawable/img_product_placeholder" />
+
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
@@ -62,9 +66,9 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_toEndOf="@id/iv_image"
             android:text="@string/str_maddie_brown"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp" />
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/iv_menu"
             android:layout_width="@dimen/_25sdp"
@@ -79,6 +83,7 @@
             android:focusable="true"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_more" />
+
         <TextView
             android:id="@+id/tv_no_of_stock_item"
             android:layout_width="wrap_content"
@@ -101,6 +106,7 @@
             android:textColor="@color/purple_800"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tv_price"
             android:layout_width="wrap_content"
@@ -112,28 +118,30 @@
             android:text="@string/str_rs_500"
             android:textColor="@color/black"
             android:textSize="@dimen/_9sdp" />
+
         <TextView
             android:id="@+id/tv_address"
-            android:layout_toEndOf="@+id/iv_image"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textSize="@dimen/_10sdp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/str_location"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:textColor="@color/black"/>
+            android:layout_toEndOf="@+id/iv_image"
+            android:maxLines="1"
+            android:text="@string/str_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/iv_menu"
-            android:textSize="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/iv_menu"
             android:text="@string/Str_date"
-            android:layout_marginEnd="@dimen/_10sdp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -45,7 +45,7 @@ class CategoryListAdapter(
             Glide.with(context).load(category.brandImage)
                 .placeholder(R.drawable.img_category_logo)
                 .into(binding.ivImage)
-            binding.tvName.text = category.categoryTitle
+            binding.tvName.text  = category.categoryTitle
             itemView.setOnClickListener {
                 Navigation.findNavController(itemView).navigate(R.id.product_Fragment)
             }

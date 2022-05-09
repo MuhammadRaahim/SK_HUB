@@ -1,5 +1,7 @@
 package com.jdars.shared_online_business.models
 
+import java.io.Serializable
+
 data class Product(
     var id: String = "",
     var ownerId: String = "",
@@ -15,4 +17,4 @@ data class Product(
     var pLocation: String = "",
     var pCondition: Boolean = false,
     var pImage: String? = null
-    )
+    ): Serializable

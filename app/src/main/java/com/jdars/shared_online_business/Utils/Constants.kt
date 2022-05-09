@@ -7,5 +7,6 @@ class Constants {
         const val BRANDS_DATABASE_ROOT = "Brands"
         const val CATEGORY_DATABASE_ROOT = "Category"
         const val PRODUCT_DATABASE_ROOT = "Products"
+        const val PRODUCT = "product"
     }
 }

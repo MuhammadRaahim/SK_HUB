@@ -102,4 +102,6 @@
     <string name="str_please_wait">Please Wait</string>
     <string name="str_file_uploading">file is uploading</string>
     <string name="str_select_brand">Select Brand</string>
+    <string name="str_in_use">In Use</string>
+    <string name="str_new">New</string>
 </resources>
