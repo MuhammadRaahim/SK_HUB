@@ -3,9 +3,11 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.horizam.skbhub.Utils.Constants
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ProductListItemBinding
 import com.jdars.shared_online_business.models.Product
@@ -48,11 +50,12 @@ class ProductAdapter(
                 .placeholder(R.drawable.img_product_placeholder)
                 .into(binding.ivImage)
             binding.tvName.text = product.pTitle
-            binding.tvPrice.text = product.pPrice
+            binding.tvPrice.text = "RS: ${product.pPrice}/="
             binding.tvAddress.text = product.pBrand
             binding.tvDate.text = product.createdAt
             itemView.setOnClickListener {
-                findNavController(itemView).navigate(R.id.product_details_Fragment)
+                val bundle =  bundleOf(Constants.PRODUCT to product)
+                findNavController(itemView).navigate(R.id.product_details_Fragment,bundle)
             }
         }
 

@@ -3,12 +3,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.horizam.skbhub.Utils.Constants
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.CategoryListItemBinding
 import com.jdars.shared_online_business.models.Category
+import com.jdars.shared_online_business.models.Selection
 
 
 class CategoryListAdapter(
@@ -47,7 +50,9 @@ class CategoryListAdapter(
                 .into(binding.ivImage)
             binding.tvName.text  = category.categoryTitle
             itemView.setOnClickListener {
-                Navigation.findNavController(itemView).navigate(R.id.product_Fragment)
+                val selection = Selection(Constants.CATEGORY,category.categoryTitle)
+                val bundle =  bundleOf("select" to selection)
+                Navigation.findNavController(itemView).navigate(R.id.product_Fragment,bundle)
             }
         }
 

@@ -97,6 +97,9 @@ class ProductDetailsFragment : Fragment() {
     }
 
     private fun showSellerInfo() {
+        if(product.ownerId == auth.currentUser!!.uid){
+            binding.btnChat.visibility = View.GONE
+        }
         Glide.with(requireContext()).load(user.profileImage)
             .placeholder(R.drawable.ic_profile_placeholder)
             .into(binding.ciSellerProfileImage)

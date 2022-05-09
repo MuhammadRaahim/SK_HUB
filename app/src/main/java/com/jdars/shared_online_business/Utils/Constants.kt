@@ -8,5 +8,7 @@ class Constants {
         const val CATEGORY_DATABASE_ROOT = "Category"
         const val PRODUCT_DATABASE_ROOT = "Products"
         const val PRODUCT = "product"
+        const val CATEGORY = "category"
+        const val BRANDS = "brand"
     }
 }

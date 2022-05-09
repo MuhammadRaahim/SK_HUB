@@ -332,6 +332,7 @@
                         android:textSize="@dimen/_11sdp"
                         android:textStyle="bold"
                         tools:ignore="RelativeOverlap" />
+
                     <TextView
                         android:id="@+id/tv_member_since"
                         android:layout_width="wrap_content"
