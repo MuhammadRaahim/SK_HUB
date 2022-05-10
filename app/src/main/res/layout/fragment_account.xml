@@ -8,30 +8,33 @@
         android:id="@+id/tab_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp">
+
         <ImageView
             android:id="@+id/back_IV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/_15ssp"
-            android:padding="@dimen/_7sdp"
-            android:src="@drawable/ic_back"
-            android:clickable="true"
-            android:focusable="true"
+            android:visibility="gone"
             android:background="?attr/selectableItemBackground"
-            android:contentDescription="@string/str_todo" />
+            android:clickable="true"
+            android:contentDescription="@string/str_todo"
+            android:focusable="true"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_back" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="@dimen/_20sdp"
             android:text="@string/str_account"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"
-            android:textAllCaps="true"
             android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/search"
             android:layout_width="@dimen/_32sdp"
@@ -39,12 +42,13 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/_18sdp"
+            android:visibility="gone"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:contentDescription="@string/str_todo"
             android:focusable="true"
             android:padding="@dimen/_7sdp"
-            android:src="@drawable/ic_search_gray"/>
+            android:src="@drawable/ic_search_gray" />
     </RelativeLayout>
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
@@ -59,11 +63,10 @@
                 android:id="@+id/outer_relativelayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/cv_profile_image"
-                    android:layout_width="@dimen/_70sdp"
-                    android:layout_height="@dimen/_70sdp"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:scaleType="centerCrop"

@@ -18,7 +18,6 @@ class SellerPanelFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSellerPanelBinding.inflate(layoutInflater)
-
         setClickListeners()
         return binding.root
     }
@@ -33,6 +32,9 @@ class SellerPanelFragment : Fragment() {
             }
             mcCategory.setOnClickListener {
                 findNavController().navigate(R.id.add_category_Fragment)
+            }
+            backIV.setOnClickListener {
+                findNavController().popBackStack()
             }
         }
     }

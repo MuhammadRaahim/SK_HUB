@@ -59,4 +59,9 @@
         android:name="com.jdars.shared_online_business.Fragments.AddCategoryFragment"
         android:label="@string/str_add_category"
         tools:layout="@layout/fragment_add_category" />
+    <fragment
+        android:id="@+id/notification_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.NotificaitonFragment"
+        android:label="@string/str_notification_fragment"
+        tools:layout="@layout/fragment_notificaiton" />
 </navigation>
