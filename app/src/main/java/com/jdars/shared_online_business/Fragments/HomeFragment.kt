@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -22,6 +24,7 @@ import com.horizam.skbhub.Utils.Constants
 import com.horizam.skbhub.Utils.Constants.Companion.BRANDS_DATABASE_ROOT
 import com.horizam.skbhub.Utils.Constants.Companion.CATEGORY_DATABASE_ROOT
 import com.horizam.skbhub.Utils.Constants.Companion.PRODUCT_DATABASE_ROOT
+import com.horizam.skbhub.Utils.Constants.Companion.USERS_DATABASE_ROOT
 import com.jdars.shared_online_business.Adapters.ProductAdapter
 import com.jdars.shared_online_business.CallBacks.DrawerHandler
 import com.jdars.shared_online_business.CallBacks.GenericHandler
@@ -31,6 +34,7 @@ import com.jdars.shared_online_business.databinding.FragmentHomeBinding
 import com.jdars.shared_online_business.models.Brand
 import com.jdars.shared_online_business.models.Category
 import com.jdars.shared_online_business.models.Product
+import com.jdars.shared_online_business.models.User
 import java.lang.Exception
 
 
@@ -52,6 +56,8 @@ class HomeFragment : Fragment() {
     private lateinit var brandReference: CollectionReference
     private lateinit var categoryReference: CollectionReference
     private lateinit var productReference: CollectionReference
+    private lateinit var userReference: CollectionReference
+
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
     private lateinit var currentFirebaseUser: FirebaseUser
@@ -74,6 +80,28 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    private fun getUserFirebaseData(){
+        currentFirebaseUser = auth.currentUser!!
+        userReference.document(currentFirebaseUser!!.uid)
+            .get().addOnCompleteListener {
+                if (it.isSuccessful){
+                    val document: DocumentSnapshot = it.result
+                    if (document.exists()) {
+                        val user = document.toObject(User::class.java)
+                        Constants.USER_NAME = user!!.userName!!
+                        if(user.profileImage != null) {
+                            Constants.USER_IMAGE = user.profileImage!!
+                        }
+                            genericHandler.showProgressBar(false)
+
+                    }
+                }else{
+                    genericHandler.showProgressBar(false)
+                    genericHandler.showMessage( it.exception.toString())
+                }
+            }
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         drawerHandlerCallback = context as DrawerHandler
@@ -93,6 +121,7 @@ class HomeFragment : Fragment() {
         brandReference = db.collection(BRANDS_DATABASE_ROOT)
         categoryReference = db.collection(CATEGORY_DATABASE_ROOT)
         productReference = db.collection(PRODUCT_DATABASE_ROOT)
+        userReference = db.collection(USERS_DATABASE_ROOT)
         auth = FirebaseAuth.getInstance()
         currentFirebaseUser = auth.currentUser!!
     }
@@ -164,7 +193,7 @@ class HomeFragment : Fragment() {
             }
             if (productList.isNotEmpty()){
                 productAdapter.updateList(productList)
-                genericHandler.showProgressBar(false)
+                getUserFirebaseData()
             }else{
                 genericHandler.showProgressBar(false)
             }

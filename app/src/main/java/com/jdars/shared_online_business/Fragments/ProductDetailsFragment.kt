@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -20,6 +22,7 @@ import com.horizam.skbhub.Utils.Constants.Companion.PRODUCT
 import com.horizam.skbhub.Utils.Constants.Companion.USERS_DATABASE_ROOT
 import com.jdars.shared_online_business.CallBacks.GenericHandler
 import com.jdars.shared_online_business.R
+import com.jdars.shared_online_business.Utils.BaseUtils
 import com.jdars.shared_online_business.databinding.FragmentProductDetailsBinding
 import com.jdars.shared_online_business.models.Product
 import com.jdars.shared_online_business.models.User
@@ -41,7 +44,25 @@ class ProductDetailsFragment : Fragment() {
     ): View? {
         binding = FragmentProductDetailsBinding.inflate(layoutInflater)
         initViews()
+        setClickListeners()
         return binding.root
+    }
+
+    private fun setClickListeners() {
+        binding.btnChat.setOnClickListener {
+            val bundle = bundleOf(
+                "id" to user.id,
+                "name" to user.userName,
+                "photo" to user.profileImage,
+            )
+            findNavController()
+                .navigate(
+                    R.id.message_Fragment,
+                    bundle,
+                    BaseUtils.animationOpenScreen()
+                )
+
+        }
     }
 
     override fun onAttach(context: Context) {

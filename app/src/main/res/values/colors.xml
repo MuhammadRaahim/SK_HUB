@@ -12,5 +12,7 @@
     <color name="scratchEndGradient">#cccccc</color>
     <color name="colorBorder">#c1c1c1</color>
     <color name="transparentPurple">#4a437e</color>
+    <color name="transparentWhite">#F2FFFFFF</color>
+    <color name="blue">#5f81c9</color>
 
 </resources>

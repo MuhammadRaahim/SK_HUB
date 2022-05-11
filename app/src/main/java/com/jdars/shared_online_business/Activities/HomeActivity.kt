@@ -2,6 +2,8 @@ package com.jdars.shared_online_business.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import androidx.core.view.GravityCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
@@ -9,13 +11,15 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.jdars.shared_online_business.CallBacks.DrawerHandler
 import com.jdars.shared_online_business.CallBacks.GenericHandler
+import com.jdars.shared_online_business.CallBacks.HideBottomNavigation
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.databinding.ActivityHomeBinding
 
-class HomeActivity : AppCompatActivity(), DrawerHandler, GenericHandler {
+class HomeActivity : AppCompatActivity(), DrawerHandler, GenericHandler, HideBottomNavigation , NavigationView.OnNavigationItemSelectedListener{
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var bottomNavView: BottomNavigationView
@@ -36,8 +40,10 @@ class HomeActivity : AppCompatActivity(), DrawerHandler, GenericHandler {
         navController = navHostFragment.navController
     }
 
+
     private fun setUpUi() {
         bottomNavView = binding.bottomNavView
+        binding.navMenu.setNavigationItemSelectedListener(this)
         setUpNavigation()
     }
 
@@ -61,5 +67,24 @@ class HomeActivity : AppCompatActivity(), DrawerHandler, GenericHandler {
     }
 
     override fun showNoInternet(show: Boolean) {
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menu_chat ->{
+                binding.drawerLayout.closeDrawers()
+                navController.navigate(R.id.chat_Fragment)
+
+            }
+        }
+        return false
+    }
+
+    override fun hideNavigation() {
+        binding.bottomNavView.visibility = View.GONE
+    }
+
+    override fun showNavigation() {
+        binding.bottomNavView.visibility = View.VISIBLE
     }
 }

@@ -64,4 +64,14 @@
         android:name="com.jdars.shared_online_business.Fragments.NotificaitonFragment"
         android:label="@string/str_notification_fragment"
         tools:layout="@layout/fragment_notificaiton" />
+    <fragment
+        android:id="@+id/chat_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.ChatFragment"
+        android:label="@string/str_chat_fragment"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/message_Fragment"
+        android:name="com.jdars.shared_online_business.Fragments.MessageFragment"
+        android:label="@string/str_message_fragment"
+        tools:layout="@layout/fragment_message" />
 </navigation>

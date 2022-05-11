@@ -105,4 +105,11 @@
     <string name="str_in_use">In Use</string>
     <string name="str_new">New</string>
     <string name="str_notification_fragment">Notification Fragment</string>
+    <string name="str_messages">Messages</string>
+    <string name="str_no_recently_chat">No Recently Chat</string>
+    <string name="str_chat_fragment">Chat Fragment</string>
+    <string name="str_message_fragment">Message Fragment</string>
+    <string name="str_enter_message_here">Enter message here...</string>
+    <string name="str_this_is_receiver_message">this is receiver message</string>
+    <string name="str_this_is_sender_message">this is sender message</string>
 </resources>

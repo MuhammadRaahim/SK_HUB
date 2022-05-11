@@ -32,6 +32,9 @@
             android:name=".Activities.BrandsActivity"
             android:exported="false" />
         <activity
+            android:name=".Activities.AuthenticationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.AccountSettingActivity"
             android:exported="false" />
         <activity
@@ -45,7 +48,7 @@
         </activity>
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name=".Utils.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
