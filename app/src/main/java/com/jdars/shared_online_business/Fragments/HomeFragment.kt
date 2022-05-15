@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -114,6 +115,12 @@ class HomeFragment : Fragment() {
         brandList = ArrayList()
         setUpFireBase()
         getData()
+
+        binding.swipeRefresh.setOnRefreshListener{
+            getData()
+            binding.swipeRefresh.isRefreshing = false
+        }
+
     }
 
     private fun setUpFireBase() {
@@ -141,10 +148,10 @@ class HomeFragment : Fragment() {
             }
             if (brandList.isNotEmpty()){
                 brandAdapter.updateList(brandList)
-                getCategories()
             }else{
                 genericHandler.showProgressBar(false)
             }
+            getCategories()
 
         }.addOnFailureListener {
             genericHandler.showProgressBar(false)
@@ -167,11 +174,10 @@ class HomeFragment : Fragment() {
             }
             if (categoryList.isNotEmpty()){
                 categoryAdapter.updateList(categoryList)
-                getProducts()
             }else{
                 genericHandler.showProgressBar(false)
             }
-
+            getProducts()
         }.addOnFailureListener {
             genericHandler.showProgressBar(false)
             genericHandler.showMessage(it.message!!)
@@ -208,6 +214,12 @@ class HomeFragment : Fragment() {
     private fun setCLickListener() {
         binding.appHeaderLayout.ivOpenDrawer.setOnClickListener {
             drawerHandlerCallback.openDrawer()
+        }
+        binding.appHeaderLayout.ivCart.setOnClickListener {
+            findNavController().navigate(R.id.notification_Fragment)
+        }
+        binding.appHeaderLayout.ivSearch.setOnClickListener {
+            findNavController().navigate(R.id.chat_Fragment)
         }
     }
 

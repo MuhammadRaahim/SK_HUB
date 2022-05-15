@@ -18,8 +18,8 @@
         android:contentDescription="@string/str_todo"
         android:scaleType="centerCrop"
         android:src="@drawable/img_brand_logo"
-        app:civ_border_color="@color/purple_800"
-        app:civ_border_width="@dimen/_2sdp" />
+        app:civ_border_color="@color/black"
+        app:civ_border_width="@dimen/_1sdp" />
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"

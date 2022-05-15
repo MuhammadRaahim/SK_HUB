@@ -44,8 +44,11 @@ class CategoryFragment : Fragment() {
         initViews()
         setCategoryRecyclerView()
         getCategories()
+
         return binding.root
     }
+
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -86,7 +89,10 @@ class CategoryFragment : Fragment() {
             if (categoryList.isNotEmpty()){
                 categoryAdapter.updateList(categoryList)
                 genericHandler.showProgressBar(false)
+                binding.tvNoDataAvailable.visibility = View.GONE
             }else{
+                binding.tvNoDataAvailable.visibility = View.VISIBLE
+                binding.rvCategory.visibility = View.GONE
                 genericHandler.showProgressBar(false)
             }
 

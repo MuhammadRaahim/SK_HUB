@@ -42,16 +42,18 @@
         app:tint="@color/black" />
     <ImageView
         android:id="@+id/iv_search"
-        android:layout_width="@dimen/_28sdp"
-        android:layout_height="@dimen/_28sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:contentDescription="@string/str_todo"
         android:focusable="true"
-        android:layout_marginEnd="@dimen/_5sdp"
-        android:src="@drawable/ic_search_gray"
+        android:visibility="visible"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="@dimen/_5sdp" />
+        android:layout_marginRight="@dimen/_5sdp"
+        app:tint="@color/black" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,12 @@
-package com.jdars.shared_online_business.Utils
+package com.jdars.shared_online_business
 
 import android.R
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.os.Message
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
@@ -19,6 +17,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
 import com.horizam.skbhub.Utils.Constants.Companion.NOTIFICATION_DATABASE_ROOT
+import com.jdars.shared_online_business.models.Data
 import com.jdars.shared_online_business.models.Notification
 
 
@@ -113,9 +112,3 @@ class MyFirebaseMessagingService: FirebaseMessagingService() {
     }
 
 }
-
-data class Data(
-    var body: String,
-    val title: String,
-    val type: String
-)

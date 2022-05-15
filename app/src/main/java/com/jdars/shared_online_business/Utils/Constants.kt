@@ -6,6 +6,7 @@ class Constants {
         const val USERS_DATABASE_ROOT = "Users"
         const val BRANDS_DATABASE_ROOT = "Brands"
         const val CATEGORY_DATABASE_ROOT = "Category"
+        const val WISHLIST_DATABASE_ROOT = "Wishlist"
         const val PRODUCT_DATABASE_ROOT = "Products"
         const val NOTIFICATION_DATABASE_ROOT = "Notification"
         const val CONVERSATIONS_DATABASE_ROOT = "Conversations"

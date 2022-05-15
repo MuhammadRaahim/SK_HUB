@@ -24,6 +24,7 @@ import com.jdars.shared_online_business.Activities.AuthenticationActivity
 import com.jdars.shared_online_business.CallBacks.GenericHandler
 import com.jdars.shared_online_business.R
 import com.jdars.shared_online_business.Utils.BaseUtils
+import com.jdars.shared_online_business.Utils.BaseUtils.Companion.showMessage
 import com.jdars.shared_online_business.databinding.FragmentAccountBinding
 import com.jdars.shared_online_business.models.User
 
@@ -92,7 +93,11 @@ class AccountFragment : Fragment() {
             llSellerPanel.setOnClickListener {
                 findNavController().navigate(R.id.seller_panel_Fragment)
             }
+            llNotification.setOnClickListener {
+                findNavController().navigate(R.id.notification_Fragment)
+            }
             llSignOut.setOnClickListener {
+                FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(requireContext(),AuthenticationActivity::class.java))
             }
             llMyAddressses.setOnClickListener {
@@ -102,6 +107,15 @@ class AccountFragment : Fragment() {
                 val phone = "+9234004748"
                 val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
                 startActivity(intent)
+            }
+            llAboutUs.setOnClickListener {
+                showMessage(binding.root,"WE ARE THE FUTURE")
+            }
+            llPrivacy.setOnClickListener {
+                showMessage(binding.root,"All the data is encrypted end to end")
+            }
+            llRatingTheApp.setOnClickListener {
+                showMessage(binding.root,"IN DEVELOPMENT")
             }
         }
     }

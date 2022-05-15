@@ -50,7 +50,14 @@ class ProductFragment : Fragment() {
         initViews()
         setProductRecyclerView()
         getProducts()
+        setClickListeners()
         return binding.root
+    }
+
+    private fun setClickListeners() {
+        binding.backIV.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     override fun onAttach(context: Context) {

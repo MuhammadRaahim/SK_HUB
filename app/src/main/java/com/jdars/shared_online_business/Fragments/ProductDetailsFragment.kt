@@ -49,6 +49,9 @@ class ProductDetailsFragment : Fragment() {
     }
 
     private fun setClickListeners() {
+        binding.backIV.setOnClickListener {
+            findNavController().popBackStack()
+        }
         binding.btnChat.setOnClickListener {
             val bundle = bundleOf(
                 "id" to user.id,

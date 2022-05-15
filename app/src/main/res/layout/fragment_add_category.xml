@@ -209,7 +209,7 @@
                 android:layout_marginRight="@dimen/_18sdp"
                 android:background="@drawable/bg_edittext"
                 android:hint="@string/str_enter_product_description"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="@dimen/_8sdp"
                 android:paddingStart="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"

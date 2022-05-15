@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ProductFragment">
     <RelativeLayout
         android:id="@+id/tab_bar"
+        android:background="@color/purple_800"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp">
+
         <ImageView
             android:id="@+id/back_IV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/_15ssp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/str_todo"
+            android:focusable="true"
             android:padding="@dimen/_7sdp"
             android:src="@drawable/ic_back"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:contentDescription="@string/str_todo" />
+            app:tint="@color/white" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/_20sdp"
             android:text="@string/str_products"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_13ssp"
             android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/search"
             android:layout_width="@dimen/_32sdp"
@@ -41,10 +46,11 @@
             android:layout_marginEnd="@dimen/_18sdp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
+            android:visibility="gone"
             android:contentDescription="@string/str_todo"
             android:focusable="true"
             android:padding="@dimen/_7sdp"
-            android:src="@drawable/ic_search_gray"/>
+            android:src="@drawable/ic_search_gray" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_below="@id/tab_bar"
@@ -55,9 +61,9 @@
         android:id="@+id/relativelayout1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
+        android:visibility="gone"
         android:layout_below="@+id/tab_bar"
         android:layout_marginTop="@dimen/_1sdp">
-
         <ImageView
             android:id="@+id/simple_list"
             android:layout_width="@dimen/_22sdp"
@@ -67,7 +73,6 @@
             android:contentDescription="TODO"
             android:padding="@dimen/_4sdp"
             android:src="@drawable/img_list" />
-
         <RelativeLayout
             android:layout_width="0.5dp"
             android:layout_height="match_parent"

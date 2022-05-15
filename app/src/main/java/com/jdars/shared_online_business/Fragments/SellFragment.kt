@@ -94,8 +94,12 @@ class SellFragment : Fragment() {
             }
             if (productList.isNotEmpty()){
                 productAdapter.updateList(productList)
+                binding.rvProduct.visibility = View.VISIBLE
+                binding.tvNoDataAvailable.visibility = View.GONE
                 genericHandler.showProgressBar(false)
             }else{
+                binding.rvProduct.visibility = View.GONE
+                binding.tvNoDataAvailable.visibility = View.VISIBLE
                 genericHandler.showProgressBar(false)
             }
 
