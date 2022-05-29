@@ -177,7 +177,7 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:maxLines="1"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:text="@string/str_condition"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp"
@@ -229,7 +229,7 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="one time used"
                     android:textColor="@color/black"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:textSize="@dimen/_10sdp"
                     tools:ignore="RelativeOverlap"
                     android:layout_marginTop="@dimen/_3sdp"
@@ -346,14 +346,16 @@
                         android:layout_toEndOf="@+id/ci_seller_profile_image"
                         android:text="@string/str_member_since_jan_2017"
                         android:textSize="@dimen/_10sdp" />
+
                     <ImageView
-                        android:layout_width="@dimen/_15sdp"
-                        android:layout_height="@dimen/_15sdp"
+                        android:id="@+id/iv_call"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:contentDescription="@string/str_todo"
-                        android:src="@drawable/ic_right_arrow"
+                        android:src="@drawable/ic_call"
                         app:tint="@color/purple_800" />
                 </RelativeLayout>
                 <com.google.android.material.button.MaterialButton

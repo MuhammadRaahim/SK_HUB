@@ -104,7 +104,7 @@ class AccountFragment : Fragment() {
                 startActivity(Intent(requireContext(),AddressesActivity::class.java))
             }
             llContactUs.setOnClickListener {
-                val phone = "+9234004748"
+                val phone = "+923434040625"
                 val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
                 startActivity(intent)
             }

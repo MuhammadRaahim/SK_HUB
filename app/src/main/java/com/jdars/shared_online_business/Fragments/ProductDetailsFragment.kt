@@ -2,6 +2,7 @@ package com.jdars.shared_online_business.Fragments
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,6 +38,7 @@ class ProductDetailsFragment : Fragment() {
     private lateinit var userReference: CollectionReference
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
+    private lateinit var sellerPhone: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,7 +66,11 @@ class ProductDetailsFragment : Fragment() {
                     bundle,
                     BaseUtils.animationOpenScreen()
                 )
-
+        }
+        binding.ivCall.setOnClickListener {
+            val phone = sellerPhone
+            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
+            startActivity(intent)
         }
     }
 
@@ -98,6 +104,11 @@ class ProductDetailsFragment : Fragment() {
 
             type.text = product.pCategory
             size.text = product.pSize
+            if (product.pCondition){
+                condition.text = getString(R.string.str_in_use)
+            }else {
+                condition.text = getString(R.string.str_new)
+            }
             color.text = product.pColour
             description.text = product.pDescription
             getSellerDetails()
@@ -123,11 +134,13 @@ class ProductDetailsFragment : Fragment() {
     private fun showSellerInfo() {
         if(product.ownerId == auth.currentUser!!.uid){
             binding.btnChat.visibility = View.GONE
+            binding.ivCall.visibility = View.GONE
         }
         Glide.with(requireContext()).load(user.profileImage)
             .placeholder(R.drawable.ic_profile_placeholder)
             .into(binding.ciSellerProfileImage)
         binding.tvSellerName.text = user.userName
+        sellerPhone = user.phone!!
         genericHandler.showProgressBar(false)
     }
 

@@ -104,7 +104,7 @@ tools:context=".Activities.AccountSettingActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:maxLength="20" />
+                android:maxLength="40" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_field_phone"
